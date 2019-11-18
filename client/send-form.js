@@ -3,7 +3,10 @@ $(document).ready(function(){
         $.ajax({
             method: "POST",
             url: "/submit",
-            data: $('#test-form').serialize()
+            data: {
+                name: $('#name').val(),
+                email: $('#email').val()
+            }
         });
     });
 });
